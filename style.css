@@ -7,7 +7,6 @@ html, body {
   color: #333;
 }
 
-
 .container {
   height: 100vh;
   display: flex;
@@ -96,7 +95,6 @@ html, body {
     0 0 12px #ff1493;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.05em;
-  user-select: none;
   margin-left: auto;
   margin-right: auto;
 }
