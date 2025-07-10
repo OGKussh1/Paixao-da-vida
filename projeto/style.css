@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #ffe0ec;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Título branco com contorno preto interno e glow branco */
+.titulo-glitter {
+  position: relative;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: white;
+  user-select: none;
+
+  text-shadow:
+    /* contorno preto interno */
+    1px 0 0 black,
+    -1px 0 0 black,
+    0 1px 0 black,
+    0 -1px 0 black,
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+
+    /* brilho branco suave */
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 15px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.no-glitter {
+  color: white;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff;
+  font-size: 3.2rem;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.carrossel {
+  width: 320px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(216, 30, 91, 0.5);
+  background: #fff0f6;
+  position: relative;
+  margin: 0 auto;
+}
+
+.midia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade 1s ease-in-out;
+  border-radius: 20px;
+}
+
+@keyframes brilho {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.contador {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #b3003b;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #ffd6e8;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  box-shadow:
+    0 0 8px #ff69b4,
+    0 0 12px #ff1493;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.05em;
+  user-select: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icone-relógio {
+  font-size: 1.5rem;
+  animation: brilho 3s infinite alternate ease-in-out;
+}
+
+@keyframes brilho {
+  0% {
+    filter: drop-shadow(0 0 3px #ff69b4);
+  }
+  100% {
+    filter: drop-shadow(0 0 12px #ff1493);
+  }
+}
+
+#playMusicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ff69b4;
+  cursor: pointer;
+  z-index: 10;
+  font-family: 'Great Vibes', cursive;
+}
+
+#playMusicBtn:hover {
+  background: #ff69b4;
+}

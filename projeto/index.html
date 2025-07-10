@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gama 💘 Paixão</title>
+
+  <!-- Fonte romântica Great Vibes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="playMusicBtn" onclick="tocarMusica()">🎵 Tocar nossa música</button>
+
+<iframe 
+  id="ytplayer"
+  width="0" 
+  height="0" 
+  frameborder="0" 
+  allow="autoplay"
+></iframe>
+
+  <div class="container">
+    <header>
+      <h1 class="titulo-glitter">
+        Gama <span class="no-glitter">💘</span> Paixão
+      </h1>
+    </header>
+
+    <main>
+      <div class="carrossel" id="carrossel-container"></div>
+      <div class="contador" id="contador">
+        <span class="icone-relógio">⏰</span>
+        <span id="tempo-texto"></span>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
