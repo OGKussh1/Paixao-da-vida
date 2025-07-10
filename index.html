@@ -2,41 +2,50 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gama 💘 Paixão</title>
-
-  <!-- Fonte romântica Great Vibes -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button id="playMusicBtn" onclick="tocarMusica()">🎵 Tocar nossa música</button>
 
-<iframe 
-  id="ytplayer"
-  width="0" 
-  height="0" 
-  frameborder="0" 
-  allow="autoplay"
-></iframe>
+  <!-- YouTube player invisível com autoplay e som -->
+  <div id="youtube-background">
+    <iframe
+      src="https://www.youtube.com/embed/zgaCZOQCpp8?autoplay=1&mute=0&loop=1&playlist=zgaCZOQCpp8"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen
+    ></iframe>
+  </div>
 
   <div class="container">
-    <header>
-      <h1 class="titulo-glitter">
-        Gama <span class="no-glitter">💘</span> Paixão
-      </h1>
-    </header>
+    <h1>Gama 💘 Paixão</h1>
+    <p>Desde: <strong>15/12/2023 às 19:40</strong></p>
+    <div id="contador"></div>
 
-    <main>
-      <div class="carrossel" id="carrossel-container"></div>
-      <div class="contador" id="contador">
-        <span class="icone-relógio">⏰</span>
-        <span id="tempo-texto"></span>
-      </div>
-    </main>
+    <div class="carrossel">
+      <img src="imagens/1.jpg" class="ativo" />
+      <img src="imagens/2.jpg" />
+      <img src="imagens/3.jpg" />
+      <!-- Adicione mais imagens aqui -->
+    </div>
   </div>
 
   <script src="script.js"></script>
+
+  <style>
+    #youtube-background {
+      position: fixed;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    #youtube-background iframe {
+      width: 1px;
+      height: 1px;
+    }
+  </style>
 </body>
 </html>
