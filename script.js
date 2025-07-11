@@ -113,16 +113,3 @@ function tocarMusica() {
   player.src = "https://www.youtube.com/embed/zgaCZOQCpp8?autoplay=1&mute=0&loop=1&playlist=zgaCZOQCpp8";
   document.getElementById("playMusicBtn").style.display = "none";
 }
-document.getElementById('playMusicBtn').addEventListener('click', () => {
-  // Mostrar o iframe (agora ele está width=0 height=0, vamos ajustar só aqui)
-  const ytDiv = document.getElementById('youtube-background');
-  ytDiv.style.width = '1px';  // coloca tamanho visível
-  ytDiv.style.height = '1px';
-
-  // Recarrega o iframe com mute=0 para ativar som
-  const iframe = ytDiv.querySelector('iframe');
-  iframe.src = "https://www.youtube.com/embed/zgaCZOQCpp8?autoplay=1&mute=0&loop=1&playlist=zgaCZOQCpp8";
-
-  // Esconde o botão depois de tocar
-  document.getElementById('playMusicBtn').style.display = 'none';
-});

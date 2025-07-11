@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gama 💘 Paixão</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- YouTube player invisível com autoplay e som -->
+  <!-- Player YouTube invisível -->
   <div id="youtube-background">
-    <iframe
-      src="https://www.youtube.com/embed/zgaCZOQCpp8?autoplay=1&mute=0&loop=1&playlist=zgaCZOQCpp8"
+    <iframe id="ytplayer"
+      src=""
       frameborder="0"
       allow="autoplay"
       allowfullscreen
@@ -19,17 +20,18 @@
   </div>
 
   <div class="container">
-    <h1>Gama 💘 Paixão</h1>
-    <p>Desde: <strong>15/12/2023 às 19:40</strong></p>
-    <div id="contador"></div>
+    <h1 class="titulo-glitter">Gama 💘 Paixão</h1>
+    <p class="frase-romantica">Eu te amo antes de te conhecer e até o infinito.</p>
 
-    <div class="carrossel">
-      <img src="imagens/1.jpg" class="ativo" />
-      <img src="imagens/2.jpg" />
-      <img src="imagens/3.jpg" />
-      <!-- Adicione mais imagens aqui -->
+    <div id="carrossel-container" class="carrossel"></div>
+
+    <div id="contador" class="contador">
+      <span class="icone-relógio">⏳</span>
+      <span id="tempo-texto"></span>
     </div>
   </div>
+
+  <button id="playMusicBtn" onclick="tocarMusica()">Tocar música 🎵</button>
 
   <script src="script.js"></script>
 

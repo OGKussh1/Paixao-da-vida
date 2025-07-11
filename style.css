@@ -1,14 +1,17 @@
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
   background: #ffe0ec;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #333;
+  overflow: hidden;
 }
 
 .container {
   height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,41 +19,34 @@ html, body {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
+  gap: 1rem;
 }
 
-/* Título branco com contorno preto interno e glow branco */
 .titulo-glitter {
-  position: relative;
   font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   user-select: none;
-
   text-shadow:
-    /* contorno preto interno */
     1px 0 0 black,
     -1px 0 0 black,
     0 1px 0 black,
     0 -1px 0 black,
-    1px 1px 0 black,
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-
-    /* brilho branco suave */
     0 0 8px rgba(255, 255, 255, 0.7),
     0 0 15px rgba(255, 255, 255, 0.5);
-  z-index: 1;
 }
 
-.no-glitter {
+.frase-romantica {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
   color: white;
   text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff;
-  font-size: 3.2rem;
-  vertical-align: middle;
-  user-select: none;
+    1px 0 0 black,
+    -1px 0 0 black,
+    0 1px 0 black,
+    0 -1px 0 black,
+    0 0 8px rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
 .carrossel {
@@ -61,7 +57,6 @@ html, body {
   box-shadow: 0 8px 20px rgba(216, 30, 91, 0.5);
   background: #fff0f6;
   position: relative;
-  margin: 0 auto;
 }
 
 .midia {
@@ -72,35 +67,25 @@ html, body {
   border-radius: 20px;
 }
 
-@keyframes brilho {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
-}
-
 .contador {
-  margin-top: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #b3003b;
-  user-select: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
   background: #ffd6e8;
   padding: 0.4rem 1rem;
   border-radius: 25px;
-  box-shadow:
-    0 0 8px #ff69b4,
-    0 0 12px #ff1493;
+  box-shadow: 0 0 8px #ff69b4, 0 0 12px #ff1493;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.05em;
-  margin-left: auto;
-  margin-right: auto;
+  user-select: none;
 }
 
 .icone-relógio {
   font-size: 1.5rem;
+  margin-right: 0.5rem;
   animation: brilho 3s infinite alternate ease-in-out;
 }
 
