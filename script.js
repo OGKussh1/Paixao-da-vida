@@ -71,7 +71,7 @@ function anterior() {
 }
 
 function iniciarIntervalo() {
-  intervalID = setInterval(proxima, 3000);
+  intervalID = setInterval(proxima, 6000);
 }
 
 function pausarIntervalo() {
