@@ -9,17 +9,25 @@ html, body {
   overflow: hidden;
 }
 
+body {
+  background-color: #ffc0cb; /* rosa claro */
+  background-image: url('imagens/fundo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .container {
   height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;  /* Alinha ao topo */
   padding: 1rem;
+  padding-top: 0.5rem;    /* Espaço menor no topo */
   box-sizing: border-box;
   text-align: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .titulo-glitter {
@@ -39,13 +47,13 @@ html, body {
 .frase-romantica {
   font-family: 'Great Vibes', cursive;
   font-size: 1.4rem;
-  color: white;
+  color: black;
   text-shadow:
-    1px 0 0 black,
-    -1px 0 0 black,
-    0 1px 0 black,
-    0 -1px 0 black,
-    0 0 8px rgba(255, 255, 255, 0.7);
+    1px 0 0 white,
+    -1px 0 0 white,
+    0 1px 0 white,
+    0 -1px 0 white,
+    0 0 5px white;
   margin: 0;
 }
 
